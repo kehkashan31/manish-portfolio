@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpeakBetter | English Speaking Trainer</title>
+
+    <meta name="description"
+          content="SpeakBetter - Practical and personalized English speaking training for confident communication, career growth and global opportunities.">
+
+    <meta name="keywords"
+          content="English speaking trainer, English communication, spoken English, business English, interview English, English trainer">
+
+    <meta name="author" content="SpeakBetter">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* =========================================
+           GLOBAL
+        ========================================= */
+
+        :root {
+            --navy: #09294d;
+            --navy-dark: #061d37;
+            --gold: #c9963e;
+            --gold-light: #e0b96b;
+            --text: #172b45;
+            --muted: #607086;
+            --light: #f7f9fb;
+            --white: #ffffff;
+            --border: #e5e9ef;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(34px, 4vw, 50px);
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--muted);
+            max-width: 650px;
+            margin: 0 auto 45px;
+        }
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #edf0f4;
+        }
+
+        .nav {
+            height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--navy);
+            color: var(--gold-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(
+                50% 0%,
+                95% 15%,
+                95% 75%,
+                50% 100%,
+                5% 75%,
+                5% 15%
+            );
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+        .logo-text {
+            line-height: 1.1;
+        }
+
+        .logo-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .logo-tagline {
+            font-size: 11px;
+            color: var(--muted);
+            letter-spacing: .3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: .3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-note {
+            font-family: "Caveat", cursive;
+            font-size: 20px;
+            color: var(--navy);
+            transform: rotate(-4deg);
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 610px;
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffffff 0%,
+                    #ffffff 39%,
+                    rgba(255,255,255,.86) 50%,
+                    rgba(255,255,255,0) 70%
+                ),
+                url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1800&q=85")
+                center right / cover no-repeat;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            width: 52%;
+            padding: 80px 0;
+        }
+
+        .eyebrow {
+            color: #9b6b22;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 6vw, 78px);
+            line-height: 1.02;
+            color: var(--navy);
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            display: block;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: #44566c;
+            max-width: 550px;
+            margin-bottom: 32px;
+        }
+
+        .gold-line {
+            width: 42px;
+            height: 3px;
+            background: var(--gold);
+            margin-bottom: 30px;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .hero-feature {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hero-feature-icon {
+            font-size: 25px;
+            color: var(--navy);
+        }
+
+        .hero-feature strong {
+            font-size: 14px;
+        }
+
+        .hero-feature span {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .handwriting {
+            font-family: "Caveat", cursive;
+            font-size: 28px;
+            color: var(--navy);
+            margin-top: 32px;
+        }
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
+        .about {
+            background: var(--light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr 280px;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .trainer-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(9,41,77,.15);
+        }
+
+        .trainer-image img {
+            width: 100%;
+            height: 370px;
+            object-fit: cover;
+        }
+
+        .about-content h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+            color: var(--navy);
+            margin-bottom: 5px;
+        }
+
+        .about-label {
+            font-size: 12px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: #526277;
+            margin-bottom: 17px;
+        }
+
+        .stats {
+            background: white;
+            border-radius: 14px;
+            padding: 30px 25px;
+            box-shadow: 0 10px 40px rgba(9,41,77,.07);
+        }
+
+        .stat {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stat:last-child {
+            border-bottom: 0;
+        }
+
+        .stat-icon {
+            font-size: 25px;
+            color: var(--navy);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 20px;
+            color: var(--navy);
+        }
+
+        .stat span {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* =========================================
+           PROGRAMS
+        ========================================= */
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+
+        .program {
+            padding: 30px 20px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-align: center;
+            transition: .3s;
+            background: white;
+        }
+
+        .program:hover {
+            transform: translateY(-8px);
+            border-color: #cbd5e1;
+            box-shadow: 0 15px 40px rgba(9,41,77,.09);
+        }
+
+        .program-icon {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .program h3 {
+            font-size: 16px;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .program p {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* =========================================
+           GLOBAL COMMUNITY
+        ========================================= */
+
+        .global-section {
+            background: var(--navy-dark);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .global-section::before {
+            content: "WORLD";
+            position: absolute;
+            right: -30px;
+            top: -70px;
+            font-size: 170px;
+            font-weight: 700;
+            color: rgba(255,255,255,.025);
+        }
+
+        .global-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .global-content h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .global-content p {
+            color: #c4d0df;
+            max-width: 480px;
+        }
+
+        .global-stats {
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .global-stat {
+            text-align: center;
+        }
+
+        .global-stat strong {
+            display: block;
+            color: var(--gold-light);
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+        }
+
+        .global-stat span {
+            color: #c4d0df;
+            font-size: 13px;
+        }
+
+        /* =========================================
+           TESTIMONIALS
+        ========================================= */
+
+        .testimonials {
+            background: #fbfcfd;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(9,41,77,.04);
+        }
+
+        .person {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .person-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .person-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .person strong {
+            display: block;
+            color: var(--navy);
+        }
+
+        .person span {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .testimonial p {
+            color: #526277;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .quote-mark {
+            color: var(--gold);
+            font-size: 35px;
+            line-height: .7;
+            margin-bottom: 8px;
+        }
+
+        /* =========================================
+           QUOTE
+        ========================================= */
+
+        .quote-section {
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.96),
+                    rgba(255,255,255,.6),
+                    rgba(255,255,255,.15)
+                ),
+                url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=80")
+                center / cover;
+        }
+
+        .quote {
+            max-width: 650px;
+        }
+
+        .quote p {
+            font-family: "Caveat", cursive;
+            font-size: 34px;
+            line-height: 1.25;
+            color: var(--navy);
+        }
+
+        .quote-line {
+            width: 45px;
+            height: 3px;
+            background: var(--gold);
+            margin-top: 20px;
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: var(--navy-dark);
+            color: white;
+            padding: 55px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .footer-logo .logo-name {
+            color: white;
+        }
+
+        .footer-logo .logo-tagline {
+            color: #aebdce;
+        }
+
+        .footer-description {
+            color: #aebdce;
+            font-size: 13px;
+            margin-top: 15px;
+            max-width: 280px;
+        }
+
+        .footer-center {
+            text-align: center;
+        }
+
+        .footer-center h3 {
+            font-family: "Playfair Display", serif;
+            margin-bottom: 18px;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .social {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .3s;
+        }
+
+        .social:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .footer-note {
+            text-align: right;
+            font-family: "Caveat", cursive;
+            font-size: 28px;
+            color: #c7d1dd;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,.12);
+            margin-top: 40px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #899bad;
+            font-size: 11px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 950px) {
+
+            .nav-links {
+                gap: 18px;
+            }
+
+            .nav-note {
+                display: none;
+            }
+
+            .hero {
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(255,255,255,.97),
+                        rgba(255,255,255,.82)
+                    ),
+                    url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80")
+                    center / cover;
+            }
+
+            .hero-content {
+                width: 70%;
+            }
+
+            .about-grid {
+                grid-template-columns: 240px 1fr;
+            }
+
+            .stats {
+                grid-column: 1 / -1;
+            }
+
+            .programs-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .section {
+                padding: 65px 0;
+            }
+
+            header {
+                position: relative;
+            }
+
+            .nav {
+                height: auto;
+                padding: 15px 0;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+                background:
+                    linear-gradient(
+                        rgba(255,255,255,.91),
+                        rgba(255,255,255,.91)
+                    ),
+                    url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=80")
+                    center / cover;
+            }
+
+            .hero-content {
+                width: 100%;
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .hero-features {
+                gap: 18px;
+                flex-wrap: wrap;
+            }
+
+            .hero-feature {
+                min-width: 100px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .trainer-image {
+                max-width: 330px;
+                margin: auto;
+            }
+
+            .about-content h2 {
+                font-size: 36px;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .global-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .global-stats {
+                flex-wrap: wrap;
+            }
+
+            .global-stat {
+                flex: 1;
+                min-width: 100px;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quote-section {
+                min-height: 280px;
+            }
+
+            .quote p {
+                font-size: 29px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-description {
+                margin: 15px auto;
+            }
+
+            .footer-note {
+                text-align: center;
+            }
+
+            .copyright {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 430px) {
+
+            .logo-name {
+                font-size: 19px;
+            }
+
+            .logo-icon {
+                width: 38px;
+                height: 38px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .global-stats {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .global-stat strong {
+                font-size: 35px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a href="#home" class="logo">
+
+            <div class="logo-icon">
+                SB
+            </div>
+
+            <div class="logo-text">
+                <div class="logo-name">SpeakBetter</div>
+                <div class="logo-tagline">
+                    Better English. A Brighter You.
+                </div>
+            </div>
+
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#programs">Programs</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <div class="nav-note">
+            Language<br>
+            Connects Us ♡
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                ENGLISH SPEAKING TRAINER
+            </div>
+
+            <h1>
+                Speak Confidently.
+                <span>Go Further.</span>
+            </h1>
+
+            <p class="hero-description">
+                Practical, personalized English speaking training
+                for your career, education, and life —
+                wherever you are in the world.
+            </p>
+
+            <div class="gold-line"></div>
+
+            <div class="hero-features">
+
+                <div class="hero-feature">
+
+                    <div class="hero-feature-icon">
+                        ◯
+                    </div>
+
+                    <strong>Clear Communication</strong>
+
+                    <span>
+                        Speak naturally
+                    </span>
+
+                </div>
+
+                <div class="hero-feature">
+
+                    <div class="hero-feature-icon">
+                        ↗
+                    </div>
+
+                    <strong>Personal Growth</strong>
+
+                    <span>
+                        Build confidence
+                    </span>
+
+                </div>
+
+                <div class="hero-feature">
+
+                    <div class="hero-feature-icon">
+                        ◎
+                    </div>
+
+                    <strong>Global Opportunities</strong>
+
+                    <span>
+                        Go beyond borders
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="handwriting">
+                Same Language. A Brighter World.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     ABOUT
+========================================= -->
+
+<section class="section about" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="trainer-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=700&q=85"
+                    alt="English Speaking Trainer">
+
+            </div>
+
+
+            <div class="about-content">
+
+                <h2>About Me</h2>
+
+                <div class="about-label">
+                    YOUR PARTNER IN YOUR ENGLISH JOURNEY
+                </div>
+
+                <p>
+                    Hi, I'm an English speaking trainer passionate
+                    about helping individuals from around the world
+                    communicate confidently and naturally.
+                </p>
+
+                <p>
+                    With a practical and learner-focused approach,
+                    I make English simple, enjoyable, and effective.
+                </p>
+
+                <p>
+                    Whether you want to improve your speaking skills,
+                    prepare for interviews, study abroad, or grow
+                    your career, I'm here to guide you every step
+                    of the way.
+                </p>
+
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        🎓
+                    </div>
+
+                    <div>
+                        <strong>500+</strong>
+                        <span>Learners Trained</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        ◎
+                    </div>
+
+                    <div>
+                        <strong>20+</strong>
+                        <span>Countries</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        ★
+                    </div>
+
+                    <div>
+                        <strong>4.9/5</strong>
+                        <span>Average Rating</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        ♧
+                    </div>
+
+                    <div>
+                        <strong>Real People</strong>
+                        <span>Real Progress</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     PROGRAMS
+========================================= -->
+
+<section class="section" id="programs">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Training Programs
+        </h2>
+
+        <p class="section-subtitle">
+            Practical English for real-world communication,
+            career growth and international opportunities.
+        </p>
+
+
+        <div class="programs-grid">
+
+            <div class="program">
+
+                <div class="program-icon">💬</div>
+
+                <h3>
+                    Conversational English
+                </h3>
+
+                <p>
+                    Speak naturally and confidently
+                    in everyday situations.
+                </p>
+
+            </div>
+
+
+            <div class="program">
+
+                <div class="program-icon">💼</div>
+
+                <h3>
+                    Business English
+                </h3>
+
+                <p>
+                    Communicate professionally
+                    in the global workplace.
+                </p>
+
+            </div>
+
+
+            <div class="program">
+
+                <div class="program-icon">✈️</div>
+
+                <h3>
+                    English for Travel
+                </h3>
+
+                <p>
+                    Feel confident while
+                    exploring the world.
+                </p>
+
+            </div>
+
+
+            <div class="program">
+
+                <div class="program-icon">▤</div>
+
+                <h3>
+                    Interview Preparation
+                </h3>
+
+                <p>
+                    Prepare for your next
+                    career opportunity.
+                </p>
+
+            </div>
+
+
+            <div class="program">
+
+                <div class="program-icon">🎓</div>
+
+                <h3>
+                    Study Abroad Support
+                </h3>
+
+                <p>
+                    Build the language skills
+                    needed for global education.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     GLOBAL COMMUNITY
+========================================= -->
+
+<section class="section global-section">
+
+    <div class="container">
+
+        <div class="global-grid">
+
+            <div class="global-content">
+
+                <h2>
+                    A Global Learning Community
+                </h2>
+
+                <p>
+                    Learners from different countries are building
+                    their confidence together. English truly connects us.
+                </p>
+
+            </div>
+
+
+            <div class="global-stats">
+
+                <div class="global-stat">
+
+                    <strong>500+</strong>
+
+                    <span>
+                        Learners
+                    </span>
+
+                </div>
+
+
+                <div class="global-stat">
+
+                    <strong>20+</strong>
+
+                    <span>
+                        Countries
+                    </span>
+
+                </div>
+
+
+                <div class="global-stat">
+
+                    <strong>∞</strong>
+
+                    <span>
+                        Opportunities
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     TESTIMONIALS
+========================================= -->
+
+<section class="section testimonials" id="testimonials">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            What My Learners Say
+        </h2>
+
+        <p class="section-subtitle">
+            Real stories. Real confidence. From around the world.
+        </p>
+
+
+        <div class="testimonial-grid">
+
+
+            <div class="testimonial">
+
+                <div class="quote-mark">
+                    “
+                </div>
+
+                <p>
+                    The classes are practical and very easy to follow.
+                    I can now speak confidently in meetings.
+                </p>
+
+                <br>
+
+                <div class="person">
+
+                    <div class="person-avatar">
+
+                        <img
+                            src="https://randomuser.me/api/portraits/men/32.jpg"
+                            alt="Carlos">
+
+                    </div>
+
+                    <div>
+
+                        <strong>Carlos M.</strong>
+
+                        <span>
+                            🇲🇽 Mexico
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="quote-mark">
+                    “
+                </div>
+
+                <p>
+                    Amazing teaching style! I feel much more
+                    confident speaking English now.
+                </p>
+
+                <br>
+
+                <div class="person">
+
+                    <div class="person-avatar">
+
+                        <img
+                            src="https://randomuser.me/api/portraits/women/44.jpg"
+                            alt="Aisha">
+
+                    </div>
+
+                    <div>
+
+                        <strong>Aisha K.</strong>
+
+                        <span>
+                            🇦🇪 UAE
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="quote-mark">
+                    “
+                </div>
+
+                <p>
+                    Very patient and supportive.
+                    I feel more prepared for my dream job.
+                </p>
+
+                <br>
+
+                <div class="person">
+
+                    <div class="person-avatar">
+
+                        <img
+                            src="https://randomuser.me/api/portraits/men/45.jpg"
+                            alt="Liam">
+
+                    </div>
+
+                    <div>
+
+                        <strong>Liam T.</strong>
+
+                        <span>
+                            🇨🇦 Canada
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     INSPIRATIONAL QUOTE
+========================================= -->
+
+<section class="quote-section">
+
+    <div class="container">
+
+        <div class="quote">
+
+            <p>
+                “Language is the bridge to new opportunities,
+                new cultures and a brighter you.”
+            </p>
+
+            <div class="quote-line"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer id="contact">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-logo">
+
+                <a href="#home" class="logo">
+
+                    <div class="logo-icon">
+                        SB
+                    </div>
+
+                    <div class="logo-text">
+
+                        <div class="logo-name">
+                            SpeakBetter
+                        </div>
+
+                        <div class="logo-tagline">
+                            Better English. A Brighter You.
+                        </div>
+
+                    </div>
+
+                </a>
+
+                <p class="footer-description">
+                    Helping people around the world communicate
+                    with confidence and unlock new opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="footer-center">
+
+                <h3>
+                    Let's Stay Connected
+                </h3>
+
+                <div class="socials">
+
+                    <a href="#" class="social" aria-label="LinkedIn">
+                        in
+                    </a>
+
+                    <a href="#" class="social" aria-label="Instagram">
+                        ◎
+                    </a>
+
+                    <a href="#" class="social" aria-label="YouTube">
+                        ▶
+                    </a>
+
+                    <a href="mailto:hello@speakbetter.com"
+                       class="social"
+                       aria-label="Email">
+                        ✉
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-note">
+
+                A More Confident You
+                <br>
+                A More Connected World ♡
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <div>
+                © 2026 SpeakBetter. All rights reserved.
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
